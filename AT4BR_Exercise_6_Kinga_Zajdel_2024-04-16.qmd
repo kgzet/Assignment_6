@@ -1,5 +1,5 @@
 ---
-title: "AT4BR_Exercise_6_Kinga_Zajdel_2024-04-16"
+title: "AT4BR_Exercise_6_Kinga_Zajdel_2024-04-016"
 format: html
 editor: visual
 ---
@@ -20,24 +20,33 @@ iris_tb_long<- iris_tb %>%
   tidyr::pivot_longer(cols = !Species, names_to = "Trait", values_to = "Size") 
 
 iris_tb_long
-
 ```
 
 ### 3 - Answer the following questions. (tip: you can answer each question “piping” only 2-3 commands )
 
--   A
+-   A What is the **mean** length and width of the sepal and petal of each species?
+
+```{r}
+#iris_tb_mean<-iris_tb %>% 
+#  dplyr::select("Sepal.Length", "Sepal.Width", "Petal.Length", "Petal.Width", #"Species", )
+#
+# rmarkdown::paged_table(iris_tb_mean) # shows the table
+
+iris_tb_long  %>%  # using the long version with it's cols!
+  dplyr::group_by(Species, Trait) %>% 
+  summarise(mean = mean(Size)) # assigning name of the column
+
+```
+
+-   B What is the **largest** and **widest**,  **petal** and **sepal**,  of **virginica** and **versicolor** species?
 
 ```{r}
 
 ```
 
--   B
-
-```{r}
-
-```
-
--   C
+-   C For each species, for **sepal** and **petal**, **width** and **length**,  how many observations are above the mean?*
+(tip: adding the means as column might help)
+*3C Might seem difficult (it is not that difficult if you know the tricks ;) ). If you don’t manage to make it work, submit your best attempts and we will discuss it in class.
 
 ```{r}
 
