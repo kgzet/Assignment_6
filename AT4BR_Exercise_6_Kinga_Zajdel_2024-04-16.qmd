@@ -1,0 +1,40 @@
+---
+title: "AT4BR_Exercise_6_Kinga_Zajdel_2024-04-016"
+format: html
+editor: visual
+---
+
+### 1 - Load the “iris” dataset.
+
+```{r}
+
+```
+
+### 2 - Transform it to longer (tip: you should get 3 columns Species \| Trait \| Size )
+
+```{r}
+1 + 1
+```
+
+### 3 - Answer the following questions. (tip: you can answer each question “piping” only 2-3 commands )
+
+- A
+
+```{r}
+#| echo: false
+2 * 2
+```
+
+- B
+
+```{r}
+
+```
+
+- C
+
+```{r}
+
+```
+
+
