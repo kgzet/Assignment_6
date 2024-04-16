@@ -9,14 +9,14 @@ editor: visual
 ```{r}
 install.packages("tidyverse")
 library (tidyverse)
-iris_tb <- as_tibble (iris)
+iris_tb <- (iris)
 iris_tb
 ```
 
 ### 2 - Transform it to longer (tip: you should get 3 columns Species \| Trait \| Size )
 
 ```{r}
-iris_tb_long<- iris_tb %>% 
+iris_tb_long<- iris_tb |>
   tidyr::pivot_longer(cols = !Species, names_to = "Trait", values_to = "Size") 
 
 iris_tb_long
@@ -27,22 +27,22 @@ iris_tb_long
 -   A What is the **mean** length and width of the sepal and petal of each species?
 
 ```{r}
-#iris_tb_mean<-iris_tb %>% 
+#iris_tb_mean<-iris_tb |> 
 #  dplyr::select("Sepal.Length", "Sepal.Width", "Petal.Length", "Petal.Width", #"Species", )
 #
 # rmarkdown::paged_table(iris_tb_mean) # shows the table
 
-iris_tb_long  %>%  # using the long version with its cols!
-  dplyr::group_by(Species, Trait) %>% 
+iris_tb_long  |>  # using the long version with its cols!
+  dplyr::group_by(Species, Trait) |> 
   summarise(mean = mean(Size)) # assigning name of the column
 ```
 
 -   B What is the **largest** and **widest**,  **petal** and **sepal**,  of **virginica** and **versicolor** species?
 
 ```{r}
-iris_tb_long %>%  # using the long version with its col names!
-  filter(Species %in% c("virginica", "versicolor")) %>% # no setosa
-  group_by(Species, Trait) %>% # as above: grouping by two categories
+iris_tb_long |>  # using the long version with its col names!
+  dplyr::filter(Species %in% c("virginica", "versicolor")) |> # no setosa
+  group_by(Species, Trait) |> # as above: grouping by two categories
   summarise(maximum = max(Size))
 # From Console:
 # `summarise()` has grouped output by 'Species'. You can override using the `.groups` argument.
@@ -53,7 +53,16 @@ iris_tb_long %>%  # using the long version with its col names!
 *3C Might seem difficult (it is not that difficult if you know the tricks ;) ). If you don’t manage to make it work, submit your best attempts and we will discuss it in class.
 
 ```{r}
+# n() counts observations
+# mutate() changes the values of columns and creates new columns.
+# filter() chooses rows based on column values
 
+#iris_tb_long
+
+iris_tb_long |> # using the long version with its cols!
+  dplyr::filter(Species %in% c("virginica", "versicolor")) |> # no setosa
+  group_by(Species, Trait) |> # as above: grouping by two categories
+  summarise(mean = mean(Size))
 ```
 
 ### A helpful webpage:
