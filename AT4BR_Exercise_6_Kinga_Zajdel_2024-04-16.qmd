@@ -7,7 +7,10 @@ editor: visual
 ### 1 - Load the “iris” dataset.
 
 ```{r}
-
+install.packages("tidyverse")
+library (tidyverse)
+iris_tb <- as_tibble (iris)
+iris_tb
 ```
 
 ### 2 - Transform it to longer (tip: you should get 3 columns Species \| Trait \| Size )
@@ -18,23 +21,22 @@ editor: visual
 
 ### 3 - Answer the following questions. (tip: you can answer each question “piping” only 2-3 commands )
 
-- A
-
-```{r}
-#| echo: false
-2 * 2
-```
-
-- B
+-   A
 
 ```{r}
 
 ```
 
-- C
+-   B
 
 ```{r}
 
 ```
 
+-   C
 
+```{r}
+
+```
+
+*No AI used.*
