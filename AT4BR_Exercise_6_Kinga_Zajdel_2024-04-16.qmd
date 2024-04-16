@@ -44,6 +44,7 @@ iris_tb_long %>%  # using the long version with its col names!
   filter(Species %in% c("virginica", "versicolor")) %>% # no setosa
   group_by(Species, Trait) %>% # as above: grouping by two categories
   summarise(maximum = max(Size))
+# From Console:
 # `summarise()` has grouped output by 'Species'. You can override using the `.groups` argument.
 ```
 
