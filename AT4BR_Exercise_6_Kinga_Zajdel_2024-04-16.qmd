@@ -32,16 +32,19 @@ iris_tb_long
 #
 # rmarkdown::paged_table(iris_tb_mean) # shows the table
 
-iris_tb_long  %>%  # using the long version with it's cols!
+iris_tb_long  %>%  # using the long version with its cols!
   dplyr::group_by(Species, Trait) %>% 
   summarise(mean = mean(Size)) # assigning name of the column
-
 ```
 
 -   B What is the **largest** and **widest**,  **petal** and **sepal**,  of **virginica** and **versicolor** species?
 
 ```{r}
-
+iris_tb_long %>%  # using the long version with its col names!
+  filter(Species %in% c("virginica", "versicolor")) %>% # no setosa
+  group_by(Species, Trait) %>% # as above: grouping by two categories
+  summarise(maximum = max(Size))
+# `summarise()` has grouped output by 'Species'. You can override using the `.groups` argument.
 ```
 
 -   C For each species, for **sepal** and **petal**, **width** and **length**,  how many observations are above the mean?*
@@ -51,5 +54,8 @@ iris_tb_long  %>%  # using the long version with it's cols!
 ```{r}
 
 ```
+
+### A helpful webpage:
+https://dplyr.tidyverse.org/articles
 
 *No AI used.*
