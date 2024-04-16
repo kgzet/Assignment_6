@@ -1,5 +1,5 @@
 ---
-title: "AT4BR_Exercise_6_Kinga_Zajdel_2024-04-016"
+title: "AT4BR_Exercise_6_Kinga_Zajdel_2024-04-16"
 format: html
 editor: visual
 ---
@@ -16,7 +16,11 @@ iris_tb
 ### 2 - Transform it to longer (tip: you should get 3 columns Species \| Trait \| Size )
 
 ```{r}
-1 + 1
+iris_tb_long<- iris_tb %>% 
+  tidyr::pivot_longer(cols = !Species, names_to = "Trait", values_to = "Size") 
+
+iris_tb_long
+
 ```
 
 ### 3 - Answer the following questions. (tip: you can answer each question “piping” only 2-3 commands )
