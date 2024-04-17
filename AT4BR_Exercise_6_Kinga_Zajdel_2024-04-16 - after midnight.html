@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<!-- saved from url=(0158)file:///C:/Users/Batracha/Desktop/Advanced%20Toolkit%20for%20Bioinformatics%20Research/%C4%86wiczenia/6/project6/AT4BR_Exercise_6_Kinga_Zajdel_2024-04-16.html -->
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
+<meta name="generator" content="quarto-1.3.450">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>AT4BR_Exercise_6_Kinga_Zajdel_2024-04-16</title>
+<style class="anchorjs"></style><style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="./AT4BR_Exercise_6_Kinga_Zajdel_2024-04-16_files/clipboard.min.js.pobrane"></script>
+<script src="./AT4BR_Exercise_6_Kinga_Zajdel_2024-04-16_files/quarto.js.pobrane"></script>
+<script src="./AT4BR_Exercise_6_Kinga_Zajdel_2024-04-16_files/popper.min.js.pobrane"></script>
+<script src="./AT4BR_Exercise_6_Kinga_Zajdel_2024-04-16_files/tippy.umd.min.js.pobrane"></script>
+<script src="./AT4BR_Exercise_6_Kinga_Zajdel_2024-04-16_files/anchor.min.js.pobrane"></script>
+<link href="./AT4BR_Exercise_6_Kinga_Zajdel_2024-04-16_files/tippy.css" rel="stylesheet">
+<link href="./AT4BR_Exercise_6_Kinga_Zajdel_2024-04-16_files/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="./AT4BR_Exercise_6_Kinga_Zajdel_2024-04-16_files/bootstrap.min.js.pobrane"></script>
+<link href="./AT4BR_Exercise_6_Kinga_Zajdel_2024-04-16_files/bootstrap-icons.css" rel="stylesheet">
+<link href="./AT4BR_Exercise_6_Kinga_Zajdel_2024-04-16_files/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+
+<link href="./AT4BR_Exercise_6_Kinga_Zajdel_2024-04-16_files/pagedtable.css" rel="stylesheet">
+<script src="./AT4BR_Exercise_6_Kinga_Zajdel_2024-04-16_files/pagedtable.js.pobrane"></script>
+
+
+</head>
+
+<body class="fullcontent quarto-light">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">AT4BR_Exercise_6_Kinga_Zajdel_2024-04-16</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<section id="load-the-iris-dataset." class="level3">
+<h3 class="anchored" data-anchor-id="load-the-iris-dataset.">1 - Load the “iris” dataset.<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="" href="file:///C:/Users/Batracha/Desktop/Advanced%20Toolkit%20for%20Bioinformatics%20Research/%C4%86wiczenia/6/project6/AT4BR_Exercise_6_Kinga_Zajdel_2024-04-16.html#load-the-iris-dataset." style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="file:///C:/Users/Batracha/Desktop/Advanced%20Toolkit%20for%20Bioinformatics%20Research/%C4%86wiczenia/6/project6/AT4BR_Exercise_6_Kinga_Zajdel_2024-04-16.html#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"tidyverse"</span>, <span class="at">repos =</span> <span class="st">"https://cran.r-project.org/"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>pakiet 'tidyverse' został pomyślnie rozpakowany oraz sumy MD5 zostały sprawdzone
+
+Pobrane pakiety binarne są w
+    C:\Users\Batracha\AppData\Local\Temp\RtmpC8cNKD\downloaded_packages</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="file:///C:/Users/Batracha/Desktop/Advanced%20Toolkit%20for%20Bioinformatics%20Research/%C4%86wiczenia/6/project6/AT4BR_Exercise_6_Kinga_Zajdel_2024-04-16.html#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span> (tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: pakiet 'tidyverse' został zbudowany w wersji R 4.2.3</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: pakiet 'ggplot2' został zbudowany w wersji R 4.2.3</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: pakiet 'tibble' został zbudowany w wersji R 4.2.3</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: pakiet 'tidyr' został zbudowany w wersji R 4.2.3</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: pakiet 'readr' został zbudowany w wersji R 4.2.3</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: pakiet 'purrr' został zbudowany w wersji R 4.2.3</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: pakiet 'dplyr' został zbudowany w wersji R 4.2.3</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: pakiet 'stringr' został zbudowany w wersji R 4.2.3</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: pakiet 'forcats' został zbudowany w wersji R 4.2.3</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: pakiet 'lubridate' został zbudowany w wersji R 4.2.3</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
+✔ dplyr     1.1.4     ✔ readr     2.1.5
+✔ forcats   1.0.0     ✔ stringr   1.5.1
+✔ ggplot2   3.5.0     ✔ tibble    3.2.1
+✔ lubridate 1.9.3     ✔ tidyr     1.3.1
+✔ purrr     1.0.2     
+── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+✖ dplyr::filter() masks stats::filter()
+✖ dplyr::lag()    masks stats::lag()
+ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="file:///C:/Users/Batracha/Desktop/Advanced%20Toolkit%20for%20Bioinformatics%20Research/%C4%86wiczenia/6/project6/AT4BR_Exercise_6_Kinga_Zajdel_2024-04-16.html#cb15-1" aria-hidden="true" tabindex="-1"></a>iris_tb <span class="ot">&lt;-</span> (iris)</span>
+<span id="cb15-2"><a href="file:///C:/Users/Batracha/Desktop/Advanced%20Toolkit%20for%20Bioinformatics%20Research/%C4%86wiczenia/6/project6/AT4BR_Exercise_6_Kinga_Zajdel_2024-04-16.html#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="co">#iris_tb</span></span>
+<span id="cb15-3"><a href="file:///C:/Users/Batracha/Desktop/Advanced%20Toolkit%20for%20Bioinformatics%20Research/%C4%86wiczenia/6/project6/AT4BR_Exercise_6_Kinga_Zajdel_2024-04-16.html#cb15-3" aria-hidden="true" tabindex="-1"></a>rmarkdown<span class="sc">::</span><span class="fu">paged_table</span>(iris_tb) <span class="co"># shows the table in pages</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+
+<div data-pagedtable="true" pagedtable-page="0" class="pagedtable-wrapper">
+  <script data-pagedtable-source="" type="application/json">
+{"columns":[{"label":["Sepal.Length"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["Sepal.Width"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["Petal.Length"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["Petal.Width"],"name":[4],"type":["dbl"],"align":["right"]},{"label":["Species"],"name":[5],"type":["fct"],"align":["left"]}],"data":[{"1":"5.1","2":"3.5","3":"1.4","4":"0.2","5":"setosa"},{"1":"4.9","2":"3.0","3":"1.4","4":"0.2","5":"setosa"},{"1":"4.7","2":"3.2","3":"1.3","4":"0.2","5":"setosa"},{"1":"4.6","2":"3.1","3":"1.5","4":"0.2","5":"setosa"},{"1":"5.0","2":"3.6","3":"1.4","4":"0.2","5":"setosa"},{"1":"5.4","2":"3.9","3":"1.7","4":"0.4","5":"setosa"},{"1":"4.6","2":"3.4","3":"1.4","4":"0.3","5":"setosa"},{"1":"5.0","2":"3.4","3":"1.5","4":"0.2","5":"setosa"},{"1":"4.4","2":"2.9","3":"1.4","4":"0.2","5":"setosa"},{"1":"4.9","2":"3.1","3":"1.5","4":"0.1","5":"setosa"},{"1":"5.4","2":"3.7","3":"1.5","4":"0.2","5":"setosa"},{"1":"4.8","2":"3.4","3":"1.6","4":"0.2","5":"setosa"},{"1":"4.8","2":"3.0","3":"1.4","4":"0.1","5":"setosa"},{"1":"4.3","2":"3.0","3":"1.1","4":"0.1","5":"setosa"},{"1":"5.8","2":"4.0","3":"1.2","4":"0.2","5":"setosa"},{"1":"5.7","2":"4.4","3":"1.5","4":"0.4","5":"setosa"},{"1":"5.4","2":"3.9","3":"1.3","4":"0.4","5":"setosa"},{"1":"5.1","2":"3.5","3":"1.4","4":"0.3","5":"setosa"},{"1":"5.7","2":"3.8","3":"1.7","4":"0.3","5":"setosa"},{"1":"5.1","2":"3.8","3":"1.5","4":"0.3","5":"setosa"},{"1":"5.4","2":"3.4","3":"1.7","4":"0.2","5":"setosa"},{"1":"5.1","2":"3.7","3":"1.5","4":"0.4","5":"setosa"},{"1":"4.6","2":"3.6","3":"1.0","4":"0.2","5":"setosa"},{"1":"5.1","2":"3.3","3":"1.7","4":"0.5","5":"setosa"},{"1":"4.8","2":"3.4","3":"1.9","4":"0.2","5":"setosa"},{"1":"5.0","2":"3.0","3":"1.6","4":"0.2","5":"setosa"},{"1":"5.0","2":"3.4","3":"1.6","4":"0.4","5":"setosa"},{"1":"5.2","2":"3.5","3":"1.5","4":"0.2","5":"setosa"},{"1":"5.2","2":"3.4","3":"1.4","4":"0.2","5":"setosa"},{"1":"4.7","2":"3.2","3":"1.6","4":"0.2","5":"setosa"},{"1":"4.8","2":"3.1","3":"1.6","4":"0.2","5":"setosa"},{"1":"5.4","2":"3.4","3":"1.5","4":"0.4","5":"setosa"},{"1":"5.2","2":"4.1","3":"1.5","4":"0.1","5":"setosa"},{"1":"5.5","2":"4.2","3":"1.4","4":"0.2","5":"setosa"},{"1":"4.9","2":"3.1","3":"1.5","4":"0.2","5":"setosa"},{"1":"5.0","2":"3.2","3":"1.2","4":"0.2","5":"setosa"},{"1":"5.5","2":"3.5","3":"1.3","4":"0.2","5":"setosa"},{"1":"4.9","2":"3.6","3":"1.4","4":"0.1","5":"setosa"},{"1":"4.4","2":"3.0","3":"1.3","4":"0.2","5":"setosa"},{"1":"5.1","2":"3.4","3":"1.5","4":"0.2","5":"setosa"},{"1":"5.0","2":"3.5","3":"1.3","4":"0.3","5":"setosa"},{"1":"4.5","2":"2.3","3":"1.3","4":"0.3","5":"setosa"},{"1":"4.4","2":"3.2","3":"1.3","4":"0.2","5":"setosa"},{"1":"5.0","2":"3.5","3":"1.6","4":"0.6","5":"setosa"},{"1":"5.1","2":"3.8","3":"1.9","4":"0.4","5":"setosa"},{"1":"4.8","2":"3.0","3":"1.4","4":"0.3","5":"setosa"},{"1":"5.1","2":"3.8","3":"1.6","4":"0.2","5":"setosa"},{"1":"4.6","2":"3.2","3":"1.4","4":"0.2","5":"setosa"},{"1":"5.3","2":"3.7","3":"1.5","4":"0.2","5":"setosa"},{"1":"5.0","2":"3.3","3":"1.4","4":"0.2","5":"setosa"},{"1":"7.0","2":"3.2","3":"4.7","4":"1.4","5":"versicolor"},{"1":"6.4","2":"3.2","3":"4.5","4":"1.5","5":"versicolor"},{"1":"6.9","2":"3.1","3":"4.9","4":"1.5","5":"versicolor"},{"1":"5.5","2":"2.3","3":"4.0","4":"1.3","5":"versicolor"},{"1":"6.5","2":"2.8","3":"4.6","4":"1.5","5":"versicolor"},{"1":"5.7","2":"2.8","3":"4.5","4":"1.3","5":"versicolor"},{"1":"6.3","2":"3.3","3":"4.7","4":"1.6","5":"versicolor"},{"1":"4.9","2":"2.4","3":"3.3","4":"1.0","5":"versicolor"},{"1":"6.6","2":"2.9","3":"4.6","4":"1.3","5":"versicolor"},{"1":"5.2","2":"2.7","3":"3.9","4":"1.4","5":"versicolor"},{"1":"5.0","2":"2.0","3":"3.5","4":"1.0","5":"versicolor"},{"1":"5.9","2":"3.0","3":"4.2","4":"1.5","5":"versicolor"},{"1":"6.0","2":"2.2","3":"4.0","4":"1.0","5":"versicolor"},{"1":"6.1","2":"2.9","3":"4.7","4":"1.4","5":"versicolor"},{"1":"5.6","2":"2.9","3":"3.6","4":"1.3","5":"versicolor"},{"1":"6.7","2":"3.1","3":"4.4","4":"1.4","5":"versicolor"},{"1":"5.6","2":"3.0","3":"4.5","4":"1.5","5":"versicolor"},{"1":"5.8","2":"2.7","3":"4.1","4":"1.0","5":"versicolor"},{"1":"6.2","2":"2.2","3":"4.5","4":"1.5","5":"versicolor"},{"1":"5.6","2":"2.5","3":"3.9","4":"1.1","5":"versicolor"},{"1":"5.9","2":"3.2","3":"4.8","4":"1.8","5":"versicolor"},{"1":"6.1","2":"2.8","3":"4.0","4":"1.3","5":"versicolor"},{"1":"6.3","2":"2.5","3":"4.9","4":"1.5","5":"versicolor"},{"1":"6.1","2":"2.8","3":"4.7","4":"1.2","5":"versicolor"},{"1":"6.4","2":"2.9","3":"4.3","4":"1.3","5":"versicolor"},{"1":"6.6","2":"3.0","3":"4.4","4":"1.4","5":"versicolor"},{"1":"6.8","2":"2.8","3":"4.8","4":"1.4","5":"versicolor"},{"1":"6.7","2":"3.0","3":"5.0","4":"1.7","5":"versicolor"},{"1":"6.0","2":"2.9","3":"4.5","4":"1.5","5":"versicolor"},{"1":"5.7","2":"2.6","3":"3.5","4":"1.0","5":"versicolor"},{"1":"5.5","2":"2.4","3":"3.8","4":"1.1","5":"versicolor"},{"1":"5.5","2":"2.4","3":"3.7","4":"1.0","5":"versicolor"},{"1":"5.8","2":"2.7","3":"3.9","4":"1.2","5":"versicolor"},{"1":"6.0","2":"2.7","3":"5.1","4":"1.6","5":"versicolor"},{"1":"5.4","2":"3.0","3":"4.5","4":"1.5","5":"versicolor"},{"1":"6.0","2":"3.4","3":"4.5","4":"1.6","5":"versicolor"},{"1":"6.7","2":"3.1","3":"4.7","4":"1.5","5":"versicolor"},{"1":"6.3","2":"2.3","3":"4.4","4":"1.3","5":"versicolor"},{"1":"5.6","2":"3.0","3":"4.1","4":"1.3","5":"versicolor"},{"1":"5.5","2":"2.5","3":"4.0","4":"1.3","5":"versicolor"},{"1":"5.5","2":"2.6","3":"4.4","4":"1.2","5":"versicolor"},{"1":"6.1","2":"3.0","3":"4.6","4":"1.4","5":"versicolor"},{"1":"5.8","2":"2.6","3":"4.0","4":"1.2","5":"versicolor"},{"1":"5.0","2":"2.3","3":"3.3","4":"1.0","5":"versicolor"},{"1":"5.6","2":"2.7","3":"4.2","4":"1.3","5":"versicolor"},{"1":"5.7","2":"3.0","3":"4.2","4":"1.2","5":"versicolor"},{"1":"5.7","2":"2.9","3":"4.2","4":"1.3","5":"versicolor"},{"1":"6.2","2":"2.9","3":"4.3","4":"1.3","5":"versicolor"},{"1":"5.1","2":"2.5","3":"3.0","4":"1.1","5":"versicolor"},{"1":"5.7","2":"2.8","3":"4.1","4":"1.3","5":"versicolor"},{"1":"6.3","2":"3.3","3":"6.0","4":"2.5","5":"virginica"},{"1":"5.8","2":"2.7","3":"5.1","4":"1.9","5":"virginica"},{"1":"7.1","2":"3.0","3":"5.9","4":"2.1","5":"virginica"},{"1":"6.3","2":"2.9","3":"5.6","4":"1.8","5":"virginica"},{"1":"6.5","2":"3.0","3":"5.8","4":"2.2","5":"virginica"},{"1":"7.6","2":"3.0","3":"6.6","4":"2.1","5":"virginica"},{"1":"4.9","2":"2.5","3":"4.5","4":"1.7","5":"virginica"},{"1":"7.3","2":"2.9","3":"6.3","4":"1.8","5":"virginica"},{"1":"6.7","2":"2.5","3":"5.8","4":"1.8","5":"virginica"},{"1":"7.2","2":"3.6","3":"6.1","4":"2.5","5":"virginica"},{"1":"6.5","2":"3.2","3":"5.1","4":"2.0","5":"virginica"},{"1":"6.4","2":"2.7","3":"5.3","4":"1.9","5":"virginica"},{"1":"6.8","2":"3.0","3":"5.5","4":"2.1","5":"virginica"},{"1":"5.7","2":"2.5","3":"5.0","4":"2.0","5":"virginica"},{"1":"5.8","2":"2.8","3":"5.1","4":"2.4","5":"virginica"},{"1":"6.4","2":"3.2","3":"5.3","4":"2.3","5":"virginica"},{"1":"6.5","2":"3.0","3":"5.5","4":"1.8","5":"virginica"},{"1":"7.7","2":"3.8","3":"6.7","4":"2.2","5":"virginica"},{"1":"7.7","2":"2.6","3":"6.9","4":"2.3","5":"virginica"},{"1":"6.0","2":"2.2","3":"5.0","4":"1.5","5":"virginica"},{"1":"6.9","2":"3.2","3":"5.7","4":"2.3","5":"virginica"},{"1":"5.6","2":"2.8","3":"4.9","4":"2.0","5":"virginica"},{"1":"7.7","2":"2.8","3":"6.7","4":"2.0","5":"virginica"},{"1":"6.3","2":"2.7","3":"4.9","4":"1.8","5":"virginica"},{"1":"6.7","2":"3.3","3":"5.7","4":"2.1","5":"virginica"},{"1":"7.2","2":"3.2","3":"6.0","4":"1.8","5":"virginica"},{"1":"6.2","2":"2.8","3":"4.8","4":"1.8","5":"virginica"},{"1":"6.1","2":"3.0","3":"4.9","4":"1.8","5":"virginica"},{"1":"6.4","2":"2.8","3":"5.6","4":"2.1","5":"virginica"},{"1":"7.2","2":"3.0","3":"5.8","4":"1.6","5":"virginica"},{"1":"7.4","2":"2.8","3":"6.1","4":"1.9","5":"virginica"},{"1":"7.9","2":"3.8","3":"6.4","4":"2.0","5":"virginica"},{"1":"6.4","2":"2.8","3":"5.6","4":"2.2","5":"virginica"},{"1":"6.3","2":"2.8","3":"5.1","4":"1.5","5":"virginica"},{"1":"6.1","2":"2.6","3":"5.6","4":"1.4","5":"virginica"},{"1":"7.7","2":"3.0","3":"6.1","4":"2.3","5":"virginica"},{"1":"6.3","2":"3.4","3":"5.6","4":"2.4","5":"virginica"},{"1":"6.4","2":"3.1","3":"5.5","4":"1.8","5":"virginica"},{"1":"6.0","2":"3.0","3":"4.8","4":"1.8","5":"virginica"},{"1":"6.9","2":"3.1","3":"5.4","4":"2.1","5":"virginica"},{"1":"6.7","2":"3.1","3":"5.6","4":"2.4","5":"virginica"},{"1":"6.9","2":"3.1","3":"5.1","4":"2.3","5":"virginica"},{"1":"5.8","2":"2.7","3":"5.1","4":"1.9","5":"virginica"},{"1":"6.8","2":"3.2","3":"5.9","4":"2.3","5":"virginica"},{"1":"6.7","2":"3.3","3":"5.7","4":"2.5","5":"virginica"},{"1":"6.7","2":"3.0","3":"5.2","4":"2.3","5":"virginica"},{"1":"6.3","2":"2.5","3":"5.0","4":"1.9","5":"virginica"},{"1":"6.5","2":"3.0","3":"5.2","4":"2.0","5":"virginica"},{"1":"6.2","2":"3.4","3":"5.4","4":"2.3","5":"virginica"},{"1":"5.9","2":"3.0","3":"5.1","4":"1.8","5":"virginica"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+<div class="pagedtable pagedtable-not-empty" style="opacity: 1;"><table style="visibility: hidden; position: absolute; white-space: nowrap; height: auto; width: auto;"><tr><td>ABCDEFGHIJ0123456789</td></tr></table><table cellspacing="0" class="table table-condensed"><thead><tr><th align="right" style="text-align: right; max-width: 120px; min-width: 120px;"><div class="pagedtable-header-name">Sepal.Length</div><div class="pagedtable-header-type">&lt;dbl&gt;</div></th><th align="right" style="text-align: right; max-width: 110px; min-width: 110px;"><div class="pagedtable-header-name">Sepal.Width</div><div class="pagedtable-header-type">&lt;dbl&gt;</div></th><th align="right" style="text-align: right; max-width: 120px; min-width: 120px;"><div class="pagedtable-header-name">Petal.Length</div><div class="pagedtable-header-type">&lt;dbl&gt;</div></th><th align="right" style="text-align: right; max-width: 110px; min-width: 110px;"><div class="pagedtable-header-name">Petal.Width</div><div class="pagedtable-header-type">&lt;dbl&gt;</div></th><th align="left" style="text-align: left; max-width: 100px; min-width: 100px;"><div class="pagedtable-header-name">Species</div><div class="pagedtable-header-type">&lt;fct&gt;</div></th></tr></thead><tbody><tr class="odd"><td align="right" style="text-align: right; max-width: 120px; min-width: 120px;">5.1</td><td align="right" style="text-align: right; max-width: 110px; min-width: 110px;">3.5</td><td align="right" style="text-align: right; max-width: 120px; min-width: 120px;">1.4</td><td align="right" style="text-align: right; max-width: 110px; min-width: 110px;">0.2</td><td align="left" style="text-align: left; max-width: 100px; min-width: 100px;">setosa</td></tr><tr class="even"><td align="right" style="text-align: right; max-width: 120px; min-width: 120px;">4.9</td><td align="right" style="text-align: right; max-width: 110px; min-width: 110px;">3.0</td><td align="right" style="text-align: right; max-width: 120px; min-width: 120px;">1.4</td><td align="right" style="text-align: right; max-width: 110px; min-width: 110px;">0.2</td><td align="left" style="text-align: left; max-width: 100px; min-width: 100px;">setosa</td></tr><tr class="odd"><td align="right" style="text-align: right; max-width: 120px; min-width: 120px;">4.7</td><td align="right" style="text-align: right; max-width: 110px; min-width: 110px;">3.2</td><td align="right" style="text-align: right; max-width: 120px; min-width: 120px;">1.3</td><td align="right" style="text-align: right; max-width: 110px; min-width: 110px;">0.2</td><td align="left" style="text-align: left; max-width: 100px; min-width: 100px;">setosa</td></tr><tr class="even"><td align="right" style="text-align: right; max-width: 120px; min-width: 120px;">4.6</td><td align="right" style="text-align: right; max-width: 110px; min-width: 110px;">3.1</td><td align="right" style="text-align: right; max-width: 120px; min-width: 120px;">1.5</td><td align="right" style="text-align: right; max-width: 110px; min-width: 110px;">0.2</td><td align="left" style="text-align: left; max-width: 100px; min-width: 100px;">setosa</td></tr><tr class="odd"><td align="right" style="text-align: right; max-width: 120px; min-width: 120px;">5.0</td><td align="right" style="text-align: right; max-width: 110px; min-width: 110px;">3.6</td><td align="right" style="text-align: right; max-width: 120px; min-width: 120px;">1.4</td><td align="right" style="text-align: right; max-width: 110px; min-width: 110px;">0.2</td><td align="left" style="text-align: left; max-width: 100px; min-width: 100px;">setosa</td></tr><tr class="even"><td align="right" style="text-align: right; max-width: 120px; min-width: 120px;">5.4</td><td align="right" style="text-align: right; max-width: 110px; min-width: 110px;">3.9</td><td align="right" style="text-align: right; max-width: 120px; min-width: 120px;">1.7</td><td align="right" style="text-align: right; max-width: 110px; min-width: 110px;">0.4</td><td align="left" style="text-align: left; max-width: 100px; min-width: 100px;">setosa</td></tr><tr class="odd"><td align="right" style="text-align: right; max-width: 120px; min-width: 120px;">4.6</td><td align="right" style="text-align: right; max-width: 110px; min-width: 110px;">3.4</td><td align="right" style="text-align: right; max-width: 120px; min-width: 120px;">1.4</td><td align="right" style="text-align: right; max-width: 110px; min-width: 110px;">0.3</td><td align="left" style="text-align: left; max-width: 100px; min-width: 100px;">setosa</td></tr><tr class="even"><td align="right" style="text-align: right; max-width: 120px; min-width: 120px;">5.0</td><td align="right" style="text-align: right; max-width: 110px; min-width: 110px;">3.4</td><td align="right" style="text-align: right; max-width: 120px; min-width: 120px;">1.5</td><td align="right" style="text-align: right; max-width: 110px; min-width: 110px;">0.2</td><td align="left" style="text-align: left; max-width: 100px; min-width: 100px;">setosa</td></tr><tr class="odd"><td align="right" style="text-align: right; max-width: 120px; min-width: 120px;">4.4</td><td align="right" style="text-align: right; max-width: 110px; min-width: 110px;">2.9</td><td align="right" style="text-align: right; max-width: 120px; min-width: 120px;">1.4</td><td align="right" style="text-align: right; max-width: 110px; min-width: 110px;">0.2</td><td align="left" style="text-align: left; max-width: 100px; min-width: 100px;">setosa</td></tr><tr class="even"><td align="right" style="text-align: right; max-width: 120px; min-width: 120px;">4.9</td><td align="right" style="text-align: right; max-width: 110px; min-width: 110px;">3.1</td><td align="right" style="text-align: right; max-width: 120px; min-width: 120px;">1.5</td><td align="right" style="text-align: right; max-width: 110px; min-width: 110px;">0.1</td><td align="left" style="text-align: left; max-width: 100px; min-width: 100px;">setosa</td></tr></tbody></table><div class="pagedtable-footer"><a class="pagedtable-index-nav">Next</a><div class="pagedtable-indexes"><a class="pagedtable-index pagedtable-index-current" data-page-index="0">1</a><a class="pagedtable-index" data-page-index="1">2</a><a class="pagedtable-index" data-page-index="2">3</a><a class="pagedtable-index" data-page-index="3">4</a><a class="pagedtable-index" data-page-index="4">5</a><a class="pagedtable-index" data-page-index="5">6</a><div class="pagedtable-index-separator-right">...</div><a class="pagedtable-index" data-page-index="14">15</a></div><a class="pagedtable-index-nav pagedtable-index-nav-disabled">Previous</a><div class="pagedtable-info" title="1-10 of 150 rows">1-10 of 150 rows</div></div></div></div>
+</div>
+</div>
+</section>
+<section id="transform-it-to-longer-tip-you-should-get-3-columns-species-trait-size" class="level3">
+<h3 class="anchored" data-anchor-id="transform-it-to-longer-tip-you-should-get-3-columns-species-trait-size">2 - Transform it to longer (tip: you should get 3 columns Species | Trait | Size )<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="" href="file:///C:/Users/Batracha/Desktop/Advanced%20Toolkit%20for%20Bioinformatics%20Research/%C4%86wiczenia/6/project6/AT4BR_Exercise_6_Kinga_Zajdel_2024-04-16.html#transform-it-to-longer-tip-you-should-get-3-columns-species-trait-size" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="file:///C:/Users/Batracha/Desktop/Advanced%20Toolkit%20for%20Bioinformatics%20Research/%C4%86wiczenia/6/project6/AT4BR_Exercise_6_Kinga_Zajdel_2024-04-16.html#cb16-1" aria-hidden="true" tabindex="-1"></a>iris_tb_long<span class="ot">&lt;-</span> iris_tb <span class="sc">|&gt;</span></span>
+<span id="cb16-2"><a href="file:///C:/Users/Batracha/Desktop/Advanced%20Toolkit%20for%20Bioinformatics%20Research/%C4%86wiczenia/6/project6/AT4BR_Exercise_6_Kinga_Zajdel_2024-04-16.html#cb16-2" aria-hidden="true" tabindex="-1"></a>  tidyr<span class="sc">::</span><span class="fu">pivot_longer</span>(<span class="at">cols =</span> <span class="sc">!</span>Species, <span class="at">names_to =</span> <span class="st">"Trait"</span>, <span class="at">values_to =</span> <span class="st">"Size"</span>) </span>
+<span id="cb16-3"><a href="file:///C:/Users/Batracha/Desktop/Advanced%20Toolkit%20for%20Bioinformatics%20Research/%C4%86wiczenia/6/project6/AT4BR_Exercise_6_Kinga_Zajdel_2024-04-16.html#cb16-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-4"><a href="file:///C:/Users/Batracha/Desktop/Advanced%20Toolkit%20for%20Bioinformatics%20Research/%C4%86wiczenia/6/project6/AT4BR_Exercise_6_Kinga_Zajdel_2024-04-16.html#cb16-4" aria-hidden="true" tabindex="-1"></a>iris_tb_long</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 600 × 3
+   Species Trait         Size
+   &lt;fct&gt;   &lt;chr&gt;        &lt;dbl&gt;
+ 1 setosa  Sepal.Length   5.1
+ 2 setosa  Sepal.Width    3.5
+ 3 setosa  Petal.Length   1.4
+ 4 setosa  Petal.Width    0.2
+ 5 setosa  Sepal.Length   4.9
+ 6 setosa  Sepal.Width    3  
+ 7 setosa  Petal.Length   1.4
+ 8 setosa  Petal.Width    0.2
+ 9 setosa  Sepal.Length   4.7
+10 setosa  Sepal.Width    3.2
+# ℹ 590 more rows</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="file:///C:/Users/Batracha/Desktop/Advanced%20Toolkit%20for%20Bioinformatics%20Research/%C4%86wiczenia/6/project6/AT4BR_Exercise_6_Kinga_Zajdel_2024-04-16.html#cb18-1" aria-hidden="true" tabindex="-1"></a>rmarkdown<span class="sc">::</span><span class="fu">paged_table</span>(iris_tb_long) <span class="co"># shows the table</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+
+<div data-pagedtable="true" pagedtable-page="0" class="pagedtable-wrapper">
+  <script data-pagedtable-source="" type="application/json">
+{"columns":[{"label":["Species"],"name":[1],"type":["fct"],"align":["left"]},{"label":["Trait"],"name":[2],"type":["chr"],"align":["left"]},{"label":["Size"],"name":[3],"type":["dbl"],"align":["right"]}],"data":[{"1":"setosa","2":"Sepal.Length","3":"5.1"},{"1":"setosa","2":"Sepal.Width","3":"3.5"},{"1":"setosa","2":"Petal.Length","3":"1.4"},{"1":"setosa","2":"Petal.Width","3":"0.2"},{"1":"setosa","2":"Sepal.Length","3":"4.9"},{"1":"setosa","2":"Sepal.Width","3":"3.0"},{"1":"setosa","2":"Petal.Length","3":"1.4"},{"1":"setosa","2":"Petal.Width","3":"0.2"},{"1":"setosa","2":"Sepal.Length","3":"4.7"},{"1":"setosa","2":"Sepal.Width","3":"3.2"},{"1":"setosa","2":"Petal.Length","3":"1.3"},{"1":"setosa","2":"Petal.Width","3":"0.2"},{"1":"setosa","2":"Sepal.Length","3":"4.6"},{"1":"setosa","2":"Sepal.Width","3":"3.1"},{"1":"setosa","2":"Petal.Length","3":"1.5"},{"1":"setosa","2":"Petal.Width","3":"0.2"},{"1":"setosa","2":"Sepal.Length","3":"5.0"},{"1":"setosa","2":"Sepal.Width","3":"3.6"},{"1":"setosa","2":"Petal.Length","3":"1.4"},{"1":"setosa","2":"Petal.Width","3":"0.2"},{"1":"setosa","2":"Sepal.Length","3":"5.4"},{"1":"setosa","2":"Sepal.Width","3":"3.9"},{"1":"setosa","2":"Petal.Length","3":"1.7"},{"1":"setosa","2":"Petal.Width","3":"0.4"},{"1":"setosa","2":"Sepal.Length","3":"4.6"},{"1":"setosa","2":"Sepal.Width","3":"3.4"},{"1":"setosa","2":"Petal.Length","3":"1.4"},{"1":"setosa","2":"Petal.Width","3":"0.3"},{"1":"setosa","2":"Sepal.Length","3":"5.0"},{"1":"setosa","2":"Sepal.Width","3":"3.4"},{"1":"setosa","2":"Petal.Length","3":"1.5"},{"1":"setosa","2":"Petal.Width","3":"0.2"},{"1":"setosa","2":"Sepal.Length","3":"4.4"},{"1":"setosa","2":"Sepal.Width","3":"2.9"},{"1":"setosa","2":"Petal.Length","3":"1.4"},{"1":"setosa","2":"Petal.Width","3":"0.2"},{"1":"setosa","2":"Sepal.Length","3":"4.9"},{"1":"setosa","2":"Sepal.Width","3":"3.1"},{"1":"setosa","2":"Petal.Length","3":"1.5"},{"1":"setosa","2":"Petal.Width","3":"0.1"},{"1":"setosa","2":"Sepal.Length","3":"5.4"},{"1":"setosa","2":"Sepal.Width","3":"3.7"},{"1":"setosa","2":"Petal.Length","3":"1.5"},{"1":"setosa","2":"Petal.Width","3":"0.2"},{"1":"setosa","2":"Sepal.Length","3":"4.8"},{"1":"setosa","2":"Sepal.Width","3":"3.4"},{"1":"setosa","2":"Petal.Length","3":"1.6"},{"1":"setosa","2":"Petal.Width","3":"0.2"},{"1":"setosa","2":"Sepal.Length","3":"4.8"},{"1":"setosa","2":"Sepal.Width","3":"3.0"},{"1":"setosa","2":"Petal.Length","3":"1.4"},{"1":"setosa","2":"Petal.Width","3":"0.1"},{"1":"setosa","2":"Sepal.Length","3":"4.3"},{"1":"setosa","2":"Sepal.Width","3":"3.0"},{"1":"setosa","2":"Petal.Length","3":"1.1"},{"1":"setosa","2":"Petal.Width","3":"0.1"},{"1":"setosa","2":"Sepal.Length","3":"5.8"},{"1":"setosa","2":"Sepal.Width","3":"4.0"},{"1":"setosa","2":"Petal.Length","3":"1.2"},{"1":"setosa","2":"Petal.Width","3":"0.2"},{"1":"setosa","2":"Sepal.Length","3":"5.7"},{"1":"setosa","2":"Sepal.Width","3":"4.4"},{"1":"setosa","2":"Petal.Length","3":"1.5"},{"1":"setosa","2":"Petal.Width","3":"0.4"},{"1":"setosa","2":"Sepal.Length","3":"5.4"},{"1":"setosa","2":"Sepal.Width","3":"3.9"},{"1":"setosa","2":"Petal.Length","3":"1.3"},{"1":"setosa","2":"Petal.Width","3":"0.4"},{"1":"setosa","2":"Sepal.Length","3":"5.1"},{"1":"setosa","2":"Sepal.Width","3":"3.5"},{"1":"setosa","2":"Petal.Length","3":"1.4"},{"1":"setosa","2":"Petal.Width","3":"0.3"},{"1":"setosa","2":"Sepal.Length","3":"5.7"},{"1":"setosa","2":"Sepal.Width","3":"3.8"},{"1":"setosa","2":"Petal.Length","3":"1.7"},{"1":"setosa","2":"Petal.Width","3":"0.3"},{"1":"setosa","2":"Sepal.Length","3":"5.1"},{"1":"setosa","2":"Sepal.Width","3":"3.8"},{"1":"setosa","2":"Petal.Length","3":"1.5"},{"1":"setosa","2":"Petal.Width","3":"0.3"},{"1":"setosa","2":"Sepal.Length","3":"5.4"},{"1":"setosa","2":"Sepal.Width","3":"3.4"},{"1":"setosa","2":"Petal.Length","3":"1.7"},{"1":"setosa","2":"Petal.Width","3":"0.2"},{"1":"setosa","2":"Sepal.Length","3":"5.1"},{"1":"setosa","2":"Sepal.Width","3":"3.7"},{"1":"setosa","2":"Petal.Length","3":"1.5"},{"1":"setosa","2":"Petal.Width","3":"0.4"},{"1":"setosa","2":"Sepal.Length","3":"4.6"},{"1":"setosa","2":"Sepal.Width","3":"3.6"},{"1":"setosa","2":"Petal.Length","3":"1.0"},{"1":"setosa","2":"Petal.Width","3":"0.2"},{"1":"setosa","2":"Sepal.Length","3":"5.1"},{"1":"setosa","2":"Sepal.Width","3":"3.3"},{"1":"setosa","2":"Petal.Length","3":"1.7"},{"1":"setosa","2":"Petal.Width","3":"0.5"},{"1":"setosa","2":"Sepal.Length","3":"4.8"},{"1":"setosa","2":"Sepal.Width","3":"3.4"},{"1":"setosa","2":"Petal.Length","3":"1.9"},{"1":"setosa","2":"Petal.Width","3":"0.2"},{"1":"setosa","2":"Sepal.Length","3":"5.0"},{"1":"setosa","2":"Sepal.Width","3":"3.0"},{"1":"setosa","2":"Petal.Length","3":"1.6"},{"1":"setosa","2":"Petal.Width","3":"0.2"},{"1":"setosa","2":"Sepal.Length","3":"5.0"},{"1":"setosa","2":"Sepal.Width","3":"3.4"},{"1":"setosa","2":"Petal.Length","3":"1.6"},{"1":"setosa","2":"Petal.Width","3":"0.4"},{"1":"setosa","2":"Sepal.Length","3":"5.2"},{"1":"setosa","2":"Sepal.Width","3":"3.5"},{"1":"setosa","2":"Petal.Length","3":"1.5"},{"1":"setosa","2":"Petal.Width","3":"0.2"},{"1":"setosa","2":"Sepal.Length","3":"5.2"},{"1":"setosa","2":"Sepal.Width","3":"3.4"},{"1":"setosa","2":"Petal.Length","3":"1.4"},{"1":"setosa","2":"Petal.Width","3":"0.2"},{"1":"setosa","2":"Sepal.Length","3":"4.7"},{"1":"setosa","2":"Sepal.Width","3":"3.2"},{"1":"setosa","2":"Petal.Length","3":"1.6"},{"1":"setosa","2":"Petal.Width","3":"0.2"},{"1":"setosa","2":"Sepal.Length","3":"4.8"},{"1":"setosa","2":"Sepal.Width","3":"3.1"},{"1":"setosa","2":"Petal.Length","3":"1.6"},{"1":"setosa","2":"Petal.Width","3":"0.2"},{"1":"setosa","2":"Sepal.Length","3":"5.4"},{"1":"setosa","2":"Sepal.Width","3":"3.4"},{"1":"setosa","2":"Petal.Length","3":"1.5"},{"1":"setosa","2":"Petal.Width","3":"0.4"},{"1":"setosa","2":"Sepal.Length","3":"5.2"},{"1":"setosa","2":"Sepal.Width","3":"4.1"},{"1":"setosa","2":"Petal.Length","3":"1.5"},{"1":"setosa","2":"Petal.Width","3":"0.1"},{"1":"setosa","2":"Sepal.Length","3":"5.5"},{"1":"setosa","2":"Sepal.Width","3":"4.2"},{"1":"setosa","2":"Petal.Length","3":"1.4"},{"1":"setosa","2":"Petal.Width","3":"0.2"},{"1":"setosa","2":"Sepal.Length","3":"4.9"},{"1":"setosa","2":"Sepal.Width","3":"3.1"},{"1":"setosa","2":"Petal.Length","3":"1.5"},{"1":"setosa","2":"Petal.Width","3":"0.2"},{"1":"setosa","2":"Sepal.Length","3":"5.0"},{"1":"setosa","2":"Sepal.Width","3":"3.2"},{"1":"setosa","2":"Petal.Length","3":"1.2"},{"1":"setosa","2":"Petal.Width","3":"0.2"},{"1":"setosa","2":"Sepal.Length","3":"5.5"},{"1":"setosa","2":"Sepal.Width","3":"3.5"},{"1":"setosa","2":"Petal.Length","3":"1.3"},{"1":"setosa","2":"Petal.Width","3":"0.2"},{"1":"setosa","2":"Sepal.Length","3":"4.9"},{"1":"setosa","2":"Sepal.Width","3":"3.6"},{"1":"setosa","2":"Petal.Length","3":"1.4"},{"1":"setosa","2":"Petal.Width","3":"0.1"},{"1":"setosa","2":"Sepal.Length","3":"4.4"},{"1":"setosa","2":"Sepal.Width","3":"3.0"},{"1":"setosa","2":"Petal.Length","3":"1.3"},{"1":"setosa","2":"Petal.Width","3":"0.2"},{"1":"setosa","2":"Sepal.Length","3":"5.1"},{"1":"setosa","2":"Sepal.Width","3":"3.4"},{"1":"setosa","2":"Petal.Length","3":"1.5"},{"1":"setosa","2":"Petal.Width","3":"0.2"},{"1":"setosa","2":"Sepal.Length","3":"5.0"},{"1":"setosa","2":"Sepal.Width","3":"3.5"},{"1":"setosa","2":"Petal.Length","3":"1.3"},{"1":"setosa","2":"Petal.Width","3":"0.3"},{"1":"setosa","2":"Sepal.Length","3":"4.5"},{"1":"setosa","2":"Sepal.Width","3":"2.3"},{"1":"setosa","2":"Petal.Length","3":"1.3"},{"1":"setosa","2":"Petal.Width","3":"0.3"},{"1":"setosa","2":"Sepal.Length","3":"4.4"},{"1":"setosa","2":"Sepal.Width","3":"3.2"},{"1":"setosa","2":"Petal.Length","3":"1.3"},{"1":"setosa","2":"Petal.Width","3":"0.2"},{"1":"setosa","2":"Sepal.Length","3":"5.0"},{"1":"setosa","2":"Sepal.Width","3":"3.5"},{"1":"setosa","2":"Petal.Length","3":"1.6"},{"1":"setosa","2":"Petal.Width","3":"0.6"},{"1":"setosa","2":"Sepal.Length","3":"5.1"},{"1":"setosa","2":"Sepal.Width","3":"3.8"},{"1":"setosa","2":"Petal.Length","3":"1.9"},{"1":"setosa","2":"Petal.Width","3":"0.4"},{"1":"setosa","2":"Sepal.Length","3":"4.8"},{"1":"setosa","2":"Sepal.Width","3":"3.0"},{"1":"setosa","2":"Petal.Length","3":"1.4"},{"1":"setosa","2":"Petal.Width","3":"0.3"},{"1":"setosa","2":"Sepal.Length","3":"5.1"},{"1":"setosa","2":"Sepal.Width","3":"3.8"},{"1":"setosa","2":"Petal.Length","3":"1.6"},{"1":"setosa","2":"Petal.Width","3":"0.2"},{"1":"setosa","2":"Sepal.Length","3":"4.6"},{"1":"setosa","2":"Sepal.Width","3":"3.2"},{"1":"setosa","2":"Petal.Length","3":"1.4"},{"1":"setosa","2":"Petal.Width","3":"0.2"},{"1":"setosa","2":"Sepal.Length","3":"5.3"},{"1":"setosa","2":"Sepal.Width","3":"3.7"},{"1":"setosa","2":"Petal.Length","3":"1.5"},{"1":"setosa","2":"Petal.Width","3":"0.2"},{"1":"setosa","2":"Sepal.Length","3":"5.0"},{"1":"setosa","2":"Sepal.Width","3":"3.3"},{"1":"setosa","2":"Petal.Length","3":"1.4"},{"1":"setosa","2":"Petal.Width","3":"0.2"},{"1":"versicolor","2":"Sepal.Length","3":"7.0"},{"1":"versicolor","2":"Sepal.Width","3":"3.2"},{"1":"versicolor","2":"Petal.Length","3":"4.7"},{"1":"versicolor","2":"Petal.Width","3":"1.4"},{"1":"versicolor","2":"Sepal.Length","3":"6.4"},{"1":"versicolor","2":"Sepal.Width","3":"3.2"},{"1":"versicolor","2":"Petal.Length","3":"4.5"},{"1":"versicolor","2":"Petal.Width","3":"1.5"},{"1":"versicolor","2":"Sepal.Length","3":"6.9"},{"1":"versicolor","2":"Sepal.Width","3":"3.1"},{"1":"versicolor","2":"Petal.Length","3":"4.9"},{"1":"versicolor","2":"Petal.Width","3":"1.5"},{"1":"versicolor","2":"Sepal.Length","3":"5.5"},{"1":"versicolor","2":"Sepal.Width","3":"2.3"},{"1":"versicolor","2":"Petal.Length","3":"4.0"},{"1":"versicolor","2":"Petal.Width","3":"1.3"},{"1":"versicolor","2":"Sepal.Length","3":"6.5"},{"1":"versicolor","2":"Sepal.Width","3":"2.8"},{"1":"versicolor","2":"Petal.Length","3":"4.6"},{"1":"versicolor","2":"Petal.Width","3":"1.5"},{"1":"versicolor","2":"Sepal.Length","3":"5.7"},{"1":"versicolor","2":"Sepal.Width","3":"2.8"},{"1":"versicolor","2":"Petal.Length","3":"4.5"},{"1":"versicolor","2":"Petal.Width","3":"1.3"},{"1":"versicolor","2":"Sepal.Length","3":"6.3"},{"1":"versicolor","2":"Sepal.Width","3":"3.3"},{"1":"versicolor","2":"Petal.Length","3":"4.7"},{"1":"versicolor","2":"Petal.Width","3":"1.6"},{"1":"versicolor","2":"Sepal.Length","3":"4.9"},{"1":"versicolor","2":"Sepal.Width","3":"2.4"},{"1":"versicolor","2":"Petal.Length","3":"3.3"},{"1":"versicolor","2":"Petal.Width","3":"1.0"},{"1":"versicolor","2":"Sepal.Length","3":"6.6"},{"1":"versicolor","2":"Sepal.Width","3":"2.9"},{"1":"versicolor","2":"Petal.Length","3":"4.6"},{"1":"versicolor","2":"Petal.Width","3":"1.3"},{"1":"versicolor","2":"Sepal.Length","3":"5.2"},{"1":"versicolor","2":"Sepal.Width","3":"2.7"},{"1":"versicolor","2":"Petal.Length","3":"3.9"},{"1":"versicolor","2":"Petal.Width","3":"1.4"},{"1":"versicolor","2":"Sepal.Length","3":"5.0"},{"1":"versicolor","2":"Sepal.Width","3":"2.0"},{"1":"versicolor","2":"Petal.Length","3":"3.5"},{"1":"versicolor","2":"Petal.Width","3":"1.0"},{"1":"versicolor","2":"Sepal.Length","3":"5.9"},{"1":"versicolor","2":"Sepal.Width","3":"3.0"},{"1":"versicolor","2":"Petal.Length","3":"4.2"},{"1":"versicolor","2":"Petal.Width","3":"1.5"},{"1":"versicolor","2":"Sepal.Length","3":"6.0"},{"1":"versicolor","2":"Sepal.Width","3":"2.2"},{"1":"versicolor","2":"Petal.Length","3":"4.0"},{"1":"versicolor","2":"Petal.Width","3":"1.0"},{"1":"versicolor","2":"Sepal.Length","3":"6.1"},{"1":"versicolor","2":"Sepal.Width","3":"2.9"},{"1":"versicolor","2":"Petal.Length","3":"4.7"},{"1":"versicolor","2":"Petal.Width","3":"1.4"},{"1":"versicolor","2":"Sepal.Length","3":"5.6"},{"1":"versicolor","2":"Sepal.Width","3":"2.9"},{"1":"versicolor","2":"Petal.Length","3":"3.6"},{"1":"versicolor","2":"Petal.Width","3":"1.3"},{"1":"versicolor","2":"Sepal.Length","3":"6.7"},{"1":"versicolor","2":"Sepal.Width","3":"3.1"},{"1":"versicolor","2":"Petal.Length","3":"4.4"},{"1":"versicolor","2":"Petal.Width","3":"1.4"},{"1":"versicolor","2":"Sepal.Length","3":"5.6"},{"1":"versicolor","2":"Sepal.Width","3":"3.0"},{"1":"versicolor","2":"Petal.Length","3":"4.5"},{"1":"versicolor","2":"Petal.Width","3":"1.5"},{"1":"versicolor","2":"Sepal.Length","3":"5.8"},{"1":"versicolor","2":"Sepal.Width","3":"2.7"},{"1":"versicolor","2":"Petal.Length","3":"4.1"},{"1":"versicolor","2":"Petal.Width","3":"1.0"},{"1":"versicolor","2":"Sepal.Length","3":"6.2"},{"1":"versicolor","2":"Sepal.Width","3":"2.2"},{"1":"versicolor","2":"Petal.Length","3":"4.5"},{"1":"versicolor","2":"Petal.Width","3":"1.5"},{"1":"versicolor","2":"Sepal.Length","3":"5.6"},{"1":"versicolor","2":"Sepal.Width","3":"2.5"},{"1":"versicolor","2":"Petal.Length","3":"3.9"},{"1":"versicolor","2":"Petal.Width","3":"1.1"},{"1":"versicolor","2":"Sepal.Length","3":"5.9"},{"1":"versicolor","2":"Sepal.Width","3":"3.2"},{"1":"versicolor","2":"Petal.Length","3":"4.8"},{"1":"versicolor","2":"Petal.Width","3":"1.8"},{"1":"versicolor","2":"Sepal.Length","3":"6.1"},{"1":"versicolor","2":"Sepal.Width","3":"2.8"},{"1":"versicolor","2":"Petal.Length","3":"4.0"},{"1":"versicolor","2":"Petal.Width","3":"1.3"},{"1":"versicolor","2":"Sepal.Length","3":"6.3"},{"1":"versicolor","2":"Sepal.Width","3":"2.5"},{"1":"versicolor","2":"Petal.Length","3":"4.9"},{"1":"versicolor","2":"Petal.Width","3":"1.5"},{"1":"versicolor","2":"Sepal.Length","3":"6.1"},{"1":"versicolor","2":"Sepal.Width","3":"2.8"},{"1":"versicolor","2":"Petal.Length","3":"4.7"},{"1":"versicolor","2":"Petal.Width","3":"1.2"},{"1":"versicolor","2":"Sepal.Length","3":"6.4"},{"1":"versicolor","2":"Sepal.Width","3":"2.9"},{"1":"versicolor","2":"Petal.Length","3":"4.3"},{"1":"versicolor","2":"Petal.Width","3":"1.3"},{"1":"versicolor","2":"Sepal.Length","3":"6.6"},{"1":"versicolor","2":"Sepal.Width","3":"3.0"},{"1":"versicolor","2":"Petal.Length","3":"4.4"},{"1":"versicolor","2":"Petal.Width","3":"1.4"},{"1":"versicolor","2":"Sepal.Length","3":"6.8"},{"1":"versicolor","2":"Sepal.Width","3":"2.8"},{"1":"versicolor","2":"Petal.Length","3":"4.8"},{"1":"versicolor","2":"Petal.Width","3":"1.4"},{"1":"versicolor","2":"Sepal.Length","3":"6.7"},{"1":"versicolor","2":"Sepal.Width","3":"3.0"},{"1":"versicolor","2":"Petal.Length","3":"5.0"},{"1":"versicolor","2":"Petal.Width","3":"1.7"},{"1":"versicolor","2":"Sepal.Length","3":"6.0"},{"1":"versicolor","2":"Sepal.Width","3":"2.9"},{"1":"versicolor","2":"Petal.Length","3":"4.5"},{"1":"versicolor","2":"Petal.Width","3":"1.5"},{"1":"versicolor","2":"Sepal.Length","3":"5.7"},{"1":"versicolor","2":"Sepal.Width","3":"2.6"},{"1":"versicolor","2":"Petal.Length","3":"3.5"},{"1":"versicolor","2":"Petal.Width","3":"1.0"},{"1":"versicolor","2":"Sepal.Length","3":"5.5"},{"1":"versicolor","2":"Sepal.Width","3":"2.4"},{"1":"versicolor","2":"Petal.Length","3":"3.8"},{"1":"versicolor","2":"Petal.Width","3":"1.1"},{"1":"versicolor","2":"Sepal.Length","3":"5.5"},{"1":"versicolor","2":"Sepal.Width","3":"2.4"},{"1":"versicolor","2":"Petal.Length","3":"3.7"},{"1":"versicolor","2":"Petal.Width","3":"1.0"},{"1":"versicolor","2":"Sepal.Length","3":"5.8"},{"1":"versicolor","2":"Sepal.Width","3":"2.7"},{"1":"versicolor","2":"Petal.Length","3":"3.9"},{"1":"versicolor","2":"Petal.Width","3":"1.2"},{"1":"versicolor","2":"Sepal.Length","3":"6.0"},{"1":"versicolor","2":"Sepal.Width","3":"2.7"},{"1":"versicolor","2":"Petal.Length","3":"5.1"},{"1":"versicolor","2":"Petal.Width","3":"1.6"},{"1":"versicolor","2":"Sepal.Length","3":"5.4"},{"1":"versicolor","2":"Sepal.Width","3":"3.0"},{"1":"versicolor","2":"Petal.Length","3":"4.5"},{"1":"versicolor","2":"Petal.Width","3":"1.5"},{"1":"versicolor","2":"Sepal.Length","3":"6.0"},{"1":"versicolor","2":"Sepal.Width","3":"3.4"},{"1":"versicolor","2":"Petal.Length","3":"4.5"},{"1":"versicolor","2":"Petal.Width","3":"1.6"},{"1":"versicolor","2":"Sepal.Length","3":"6.7"},{"1":"versicolor","2":"Sepal.Width","3":"3.1"},{"1":"versicolor","2":"Petal.Length","3":"4.7"},{"1":"versicolor","2":"Petal.Width","3":"1.5"},{"1":"versicolor","2":"Sepal.Length","3":"6.3"},{"1":"versicolor","2":"Sepal.Width","3":"2.3"},{"1":"versicolor","2":"Petal.Length","3":"4.4"},{"1":"versicolor","2":"Petal.Width","3":"1.3"},{"1":"versicolor","2":"Sepal.Length","3":"5.6"},{"1":"versicolor","2":"Sepal.Width","3":"3.0"},{"1":"versicolor","2":"Petal.Length","3":"4.1"},{"1":"versicolor","2":"Petal.Width","3":"1.3"},{"1":"versicolor","2":"Sepal.Length","3":"5.5"},{"1":"versicolor","2":"Sepal.Width","3":"2.5"},{"1":"versicolor","2":"Petal.Length","3":"4.0"},{"1":"versicolor","2":"Petal.Width","3":"1.3"},{"1":"versicolor","2":"Sepal.Length","3":"5.5"},{"1":"versicolor","2":"Sepal.Width","3":"2.6"},{"1":"versicolor","2":"Petal.Length","3":"4.4"},{"1":"versicolor","2":"Petal.Width","3":"1.2"},{"1":"versicolor","2":"Sepal.Length","3":"6.1"},{"1":"versicolor","2":"Sepal.Width","3":"3.0"},{"1":"versicolor","2":"Petal.Length","3":"4.6"},{"1":"versicolor","2":"Petal.Width","3":"1.4"},{"1":"versicolor","2":"Sepal.Length","3":"5.8"},{"1":"versicolor","2":"Sepal.Width","3":"2.6"},{"1":"versicolor","2":"Petal.Length","3":"4.0"},{"1":"versicolor","2":"Petal.Width","3":"1.2"},{"1":"versicolor","2":"Sepal.Length","3":"5.0"},{"1":"versicolor","2":"Sepal.Width","3":"2.3"},{"1":"versicolor","2":"Petal.Length","3":"3.3"},{"1":"versicolor","2":"Petal.Width","3":"1.0"},{"1":"versicolor","2":"Sepal.Length","3":"5.6"},{"1":"versicolor","2":"Sepal.Width","3":"2.7"},{"1":"versicolor","2":"Petal.Length","3":"4.2"},{"1":"versicolor","2":"Petal.Width","3":"1.3"},{"1":"versicolor","2":"Sepal.Length","3":"5.7"},{"1":"versicolor","2":"Sepal.Width","3":"3.0"},{"1":"versicolor","2":"Petal.Length","3":"4.2"},{"1":"versicolor","2":"Petal.Width","3":"1.2"},{"1":"versicolor","2":"Sepal.Length","3":"5.7"},{"1":"versicolor","2":"Sepal.Width","3":"2.9"},{"1":"versicolor","2":"Petal.Length","3":"4.2"},{"1":"versicolor","2":"Petal.Width","3":"1.3"},{"1":"versicolor","2":"Sepal.Length","3":"6.2"},{"1":"versicolor","2":"Sepal.Width","3":"2.9"},{"1":"versicolor","2":"Petal.Length","3":"4.3"},{"1":"versicolor","2":"Petal.Width","3":"1.3"},{"1":"versicolor","2":"Sepal.Length","3":"5.1"},{"1":"versicolor","2":"Sepal.Width","3":"2.5"},{"1":"versicolor","2":"Petal.Length","3":"3.0"},{"1":"versicolor","2":"Petal.Width","3":"1.1"},{"1":"versicolor","2":"Sepal.Length","3":"5.7"},{"1":"versicolor","2":"Sepal.Width","3":"2.8"},{"1":"versicolor","2":"Petal.Length","3":"4.1"},{"1":"versicolor","2":"Petal.Width","3":"1.3"},{"1":"virginica","2":"Sepal.Length","3":"6.3"},{"1":"virginica","2":"Sepal.Width","3":"3.3"},{"1":"virginica","2":"Petal.Length","3":"6.0"},{"1":"virginica","2":"Petal.Width","3":"2.5"},{"1":"virginica","2":"Sepal.Length","3":"5.8"},{"1":"virginica","2":"Sepal.Width","3":"2.7"},{"1":"virginica","2":"Petal.Length","3":"5.1"},{"1":"virginica","2":"Petal.Width","3":"1.9"},{"1":"virginica","2":"Sepal.Length","3":"7.1"},{"1":"virginica","2":"Sepal.Width","3":"3.0"},{"1":"virginica","2":"Petal.Length","3":"5.9"},{"1":"virginica","2":"Petal.Width","3":"2.1"},{"1":"virginica","2":"Sepal.Length","3":"6.3"},{"1":"virginica","2":"Sepal.Width","3":"2.9"},{"1":"virginica","2":"Petal.Length","3":"5.6"},{"1":"virginica","2":"Petal.Width","3":"1.8"},{"1":"virginica","2":"Sepal.Length","3":"6.5"},{"1":"virginica","2":"Sepal.Width","3":"3.0"},{"1":"virginica","2":"Petal.Length","3":"5.8"},{"1":"virginica","2":"Petal.Width","3":"2.2"},{"1":"virginica","2":"Sepal.Length","3":"7.6"},{"1":"virginica","2":"Sepal.Width","3":"3.0"},{"1":"virginica","2":"Petal.Length","3":"6.6"},{"1":"virginica","2":"Petal.Width","3":"2.1"},{"1":"virginica","2":"Sepal.Length","3":"4.9"},{"1":"virginica","2":"Sepal.Width","3":"2.5"},{"1":"virginica","2":"Petal.Length","3":"4.5"},{"1":"virginica","2":"Petal.Width","3":"1.7"},{"1":"virginica","2":"Sepal.Length","3":"7.3"},{"1":"virginica","2":"Sepal.Width","3":"2.9"},{"1":"virginica","2":"Petal.Length","3":"6.3"},{"1":"virginica","2":"Petal.Width","3":"1.8"},{"1":"virginica","2":"Sepal.Length","3":"6.7"},{"1":"virginica","2":"Sepal.Width","3":"2.5"},{"1":"virginica","2":"Petal.Length","3":"5.8"},{"1":"virginica","2":"Petal.Width","3":"1.8"},{"1":"virginica","2":"Sepal.Length","3":"7.2"},{"1":"virginica","2":"Sepal.Width","3":"3.6"},{"1":"virginica","2":"Petal.Length","3":"6.1"},{"1":"virginica","2":"Petal.Width","3":"2.5"},{"1":"virginica","2":"Sepal.Length","3":"6.5"},{"1":"virginica","2":"Sepal.Width","3":"3.2"},{"1":"virginica","2":"Petal.Length","3":"5.1"},{"1":"virginica","2":"Petal.Width","3":"2.0"},{"1":"virginica","2":"Sepal.Length","3":"6.4"},{"1":"virginica","2":"Sepal.Width","3":"2.7"},{"1":"virginica","2":"Petal.Length","3":"5.3"},{"1":"virginica","2":"Petal.Width","3":"1.9"},{"1":"virginica","2":"Sepal.Length","3":"6.8"},{"1":"virginica","2":"Sepal.Width","3":"3.0"},{"1":"virginica","2":"Petal.Length","3":"5.5"},{"1":"virginica","2":"Petal.Width","3":"2.1"},{"1":"virginica","2":"Sepal.Length","3":"5.7"},{"1":"virginica","2":"Sepal.Width","3":"2.5"},{"1":"virginica","2":"Petal.Length","3":"5.0"},{"1":"virginica","2":"Petal.Width","3":"2.0"},{"1":"virginica","2":"Sepal.Length","3":"5.8"},{"1":"virginica","2":"Sepal.Width","3":"2.8"},{"1":"virginica","2":"Petal.Length","3":"5.1"},{"1":"virginica","2":"Petal.Width","3":"2.4"},{"1":"virginica","2":"Sepal.Length","3":"6.4"},{"1":"virginica","2":"Sepal.Width","3":"3.2"},{"1":"virginica","2":"Petal.Length","3":"5.3"},{"1":"virginica","2":"Petal.Width","3":"2.3"},{"1":"virginica","2":"Sepal.Length","3":"6.5"},{"1":"virginica","2":"Sepal.Width","3":"3.0"},{"1":"virginica","2":"Petal.Length","3":"5.5"},{"1":"virginica","2":"Petal.Width","3":"1.8"},{"1":"virginica","2":"Sepal.Length","3":"7.7"},{"1":"virginica","2":"Sepal.Width","3":"3.8"},{"1":"virginica","2":"Petal.Length","3":"6.7"},{"1":"virginica","2":"Petal.Width","3":"2.2"},{"1":"virginica","2":"Sepal.Length","3":"7.7"},{"1":"virginica","2":"Sepal.Width","3":"2.6"},{"1":"virginica","2":"Petal.Length","3":"6.9"},{"1":"virginica","2":"Petal.Width","3":"2.3"},{"1":"virginica","2":"Sepal.Length","3":"6.0"},{"1":"virginica","2":"Sepal.Width","3":"2.2"},{"1":"virginica","2":"Petal.Length","3":"5.0"},{"1":"virginica","2":"Petal.Width","3":"1.5"},{"1":"virginica","2":"Sepal.Length","3":"6.9"},{"1":"virginica","2":"Sepal.Width","3":"3.2"},{"1":"virginica","2":"Petal.Length","3":"5.7"},{"1":"virginica","2":"Petal.Width","3":"2.3"},{"1":"virginica","2":"Sepal.Length","3":"5.6"},{"1":"virginica","2":"Sepal.Width","3":"2.8"},{"1":"virginica","2":"Petal.Length","3":"4.9"},{"1":"virginica","2":"Petal.Width","3":"2.0"},{"1":"virginica","2":"Sepal.Length","3":"7.7"},{"1":"virginica","2":"Sepal.Width","3":"2.8"},{"1":"virginica","2":"Petal.Length","3":"6.7"},{"1":"virginica","2":"Petal.Width","3":"2.0"},{"1":"virginica","2":"Sepal.Length","3":"6.3"},{"1":"virginica","2":"Sepal.Width","3":"2.7"},{"1":"virginica","2":"Petal.Length","3":"4.9"},{"1":"virginica","2":"Petal.Width","3":"1.8"},{"1":"virginica","2":"Sepal.Length","3":"6.7"},{"1":"virginica","2":"Sepal.Width","3":"3.3"},{"1":"virginica","2":"Petal.Length","3":"5.7"},{"1":"virginica","2":"Petal.Width","3":"2.1"},{"1":"virginica","2":"Sepal.Length","3":"7.2"},{"1":"virginica","2":"Sepal.Width","3":"3.2"},{"1":"virginica","2":"Petal.Length","3":"6.0"},{"1":"virginica","2":"Petal.Width","3":"1.8"},{"1":"virginica","2":"Sepal.Length","3":"6.2"},{"1":"virginica","2":"Sepal.Width","3":"2.8"},{"1":"virginica","2":"Petal.Length","3":"4.8"},{"1":"virginica","2":"Petal.Width","3":"1.8"},{"1":"virginica","2":"Sepal.Length","3":"6.1"},{"1":"virginica","2":"Sepal.Width","3":"3.0"},{"1":"virginica","2":"Petal.Length","3":"4.9"},{"1":"virginica","2":"Petal.Width","3":"1.8"},{"1":"virginica","2":"Sepal.Length","3":"6.4"},{"1":"virginica","2":"Sepal.Width","3":"2.8"},{"1":"virginica","2":"Petal.Length","3":"5.6"},{"1":"virginica","2":"Petal.Width","3":"2.1"},{"1":"virginica","2":"Sepal.Length","3":"7.2"},{"1":"virginica","2":"Sepal.Width","3":"3.0"},{"1":"virginica","2":"Petal.Length","3":"5.8"},{"1":"virginica","2":"Petal.Width","3":"1.6"},{"1":"virginica","2":"Sepal.Length","3":"7.4"},{"1":"virginica","2":"Sepal.Width","3":"2.8"},{"1":"virginica","2":"Petal.Length","3":"6.1"},{"1":"virginica","2":"Petal.Width","3":"1.9"},{"1":"virginica","2":"Sepal.Length","3":"7.9"},{"1":"virginica","2":"Sepal.Width","3":"3.8"},{"1":"virginica","2":"Petal.Length","3":"6.4"},{"1":"virginica","2":"Petal.Width","3":"2.0"},{"1":"virginica","2":"Sepal.Length","3":"6.4"},{"1":"virginica","2":"Sepal.Width","3":"2.8"},{"1":"virginica","2":"Petal.Length","3":"5.6"},{"1":"virginica","2":"Petal.Width","3":"2.2"},{"1":"virginica","2":"Sepal.Length","3":"6.3"},{"1":"virginica","2":"Sepal.Width","3":"2.8"},{"1":"virginica","2":"Petal.Length","3":"5.1"},{"1":"virginica","2":"Petal.Width","3":"1.5"},{"1":"virginica","2":"Sepal.Length","3":"6.1"},{"1":"virginica","2":"Sepal.Width","3":"2.6"},{"1":"virginica","2":"Petal.Length","3":"5.6"},{"1":"virginica","2":"Petal.Width","3":"1.4"},{"1":"virginica","2":"Sepal.Length","3":"7.7"},{"1":"virginica","2":"Sepal.Width","3":"3.0"},{"1":"virginica","2":"Petal.Length","3":"6.1"},{"1":"virginica","2":"Petal.Width","3":"2.3"},{"1":"virginica","2":"Sepal.Length","3":"6.3"},{"1":"virginica","2":"Sepal.Width","3":"3.4"},{"1":"virginica","2":"Petal.Length","3":"5.6"},{"1":"virginica","2":"Petal.Width","3":"2.4"},{"1":"virginica","2":"Sepal.Length","3":"6.4"},{"1":"virginica","2":"Sepal.Width","3":"3.1"},{"1":"virginica","2":"Petal.Length","3":"5.5"},{"1":"virginica","2":"Petal.Width","3":"1.8"},{"1":"virginica","2":"Sepal.Length","3":"6.0"},{"1":"virginica","2":"Sepal.Width","3":"3.0"},{"1":"virginica","2":"Petal.Length","3":"4.8"},{"1":"virginica","2":"Petal.Width","3":"1.8"},{"1":"virginica","2":"Sepal.Length","3":"6.9"},{"1":"virginica","2":"Sepal.Width","3":"3.1"},{"1":"virginica","2":"Petal.Length","3":"5.4"},{"1":"virginica","2":"Petal.Width","3":"2.1"},{"1":"virginica","2":"Sepal.Length","3":"6.7"},{"1":"virginica","2":"Sepal.Width","3":"3.1"},{"1":"virginica","2":"Petal.Length","3":"5.6"},{"1":"virginica","2":"Petal.Width","3":"2.4"},{"1":"virginica","2":"Sepal.Length","3":"6.9"},{"1":"virginica","2":"Sepal.Width","3":"3.1"},{"1":"virginica","2":"Petal.Length","3":"5.1"},{"1":"virginica","2":"Petal.Width","3":"2.3"},{"1":"virginica","2":"Sepal.Length","3":"5.8"},{"1":"virginica","2":"Sepal.Width","3":"2.7"},{"1":"virginica","2":"Petal.Length","3":"5.1"},{"1":"virginica","2":"Petal.Width","3":"1.9"},{"1":"virginica","2":"Sepal.Length","3":"6.8"},{"1":"virginica","2":"Sepal.Width","3":"3.2"},{"1":"virginica","2":"Petal.Length","3":"5.9"},{"1":"virginica","2":"Petal.Width","3":"2.3"},{"1":"virginica","2":"Sepal.Length","3":"6.7"},{"1":"virginica","2":"Sepal.Width","3":"3.3"},{"1":"virginica","2":"Petal.Length","3":"5.7"},{"1":"virginica","2":"Petal.Width","3":"2.5"},{"1":"virginica","2":"Sepal.Length","3":"6.7"},{"1":"virginica","2":"Sepal.Width","3":"3.0"},{"1":"virginica","2":"Petal.Length","3":"5.2"},{"1":"virginica","2":"Petal.Width","3":"2.3"},{"1":"virginica","2":"Sepal.Length","3":"6.3"},{"1":"virginica","2":"Sepal.Width","3":"2.5"},{"1":"virginica","2":"Petal.Length","3":"5.0"},{"1":"virginica","2":"Petal.Width","3":"1.9"},{"1":"virginica","2":"Sepal.Length","3":"6.5"},{"1":"virginica","2":"Sepal.Width","3":"3.0"},{"1":"virginica","2":"Petal.Length","3":"5.2"},{"1":"virginica","2":"Petal.Width","3":"2.0"},{"1":"virginica","2":"Sepal.Length","3":"6.2"},{"1":"virginica","2":"Sepal.Width","3":"3.4"},{"1":"virginica","2":"Petal.Length","3":"5.4"},{"1":"virginica","2":"Petal.Width","3":"2.3"},{"1":"virginica","2":"Sepal.Length","3":"5.9"},{"1":"virginica","2":"Sepal.Width","3":"3.0"},{"1":"virginica","2":"Petal.Length","3":"5.1"},{"1":"virginica","2":"Petal.Width","3":"1.8"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+<div class="pagedtable pagedtable-not-empty" style="opacity: 1;"><table style="visibility: hidden; position: absolute; white-space: nowrap; height: auto; width: auto;"><tr><td>ABCDEFGHIJ0123456789</td></tr></table><table cellspacing="0" class="table table-condensed"><thead><tr><th align="left" style="text-align: left; max-width: 70px; min-width: 70px;"><div class="pagedtable-header-name">Species</div><div class="pagedtable-header-type">&lt;fct&gt;</div></th><th align="left" style="text-align: left; max-width: 120px; min-width: 120px;"><div class="pagedtable-header-name">Trait</div><div class="pagedtable-header-type">&lt;chr&gt;</div></th><th align="right" style="text-align: right; max-width: 40px; min-width: 40px;"><div class="pagedtable-header-name">Size</div><div class="pagedtable-header-type">&lt;dbl&gt;</div></th><th class="pagedtable-padding-col"></th><th class="pagedtable-padding-col"></th></tr></thead><tbody><tr class="odd"><td align="left" style="text-align: left; max-width: 70px; min-width: 70px;">setosa</td><td align="left" style="text-align: left; max-width: 120px; min-width: 120px;">Sepal.Length</td><td align="right" style="text-align: right; max-width: 40px; min-width: 40px;">5.1</td><td class="pagedtable-padding-col"></td><td class="pagedtable-padding-col"></td></tr><tr class="even"><td align="left" style="text-align: left; max-width: 70px; min-width: 70px;">setosa</td><td align="left" style="text-align: left; max-width: 120px; min-width: 120px;">Sepal.Width</td><td align="right" style="text-align: right; max-width: 40px; min-width: 40px;">3.5</td><td class="pagedtable-padding-col"></td><td class="pagedtable-padding-col"></td></tr><tr class="odd"><td align="left" style="text-align: left; max-width: 70px; min-width: 70px;">setosa</td><td align="left" style="text-align: left; max-width: 120px; min-width: 120px;">Petal.Length</td><td align="right" style="text-align: right; max-width: 40px; min-width: 40px;">1.4</td><td class="pagedtable-padding-col"></td><td class="pagedtable-padding-col"></td></tr><tr class="even"><td align="left" style="text-align: left; max-width: 70px; min-width: 70px;">setosa</td><td align="left" style="text-align: left; max-width: 120px; min-width: 120px;">Petal.Width</td><td align="right" style="text-align: right; max-width: 40px; min-width: 40px;">0.2</td><td class="pagedtable-padding-col"></td><td class="pagedtable-padding-col"></td></tr><tr class="odd"><td align="left" style="text-align: left; max-width: 70px; min-width: 70px;">setosa</td><td align="left" style="text-align: left; max-width: 120px; min-width: 120px;">Sepal.Length</td><td align="right" style="text-align: right; max-width: 40px; min-width: 40px;">4.9</td><td class="pagedtable-padding-col"></td><td class="pagedtable-padding-col"></td></tr><tr class="even"><td align="left" style="text-align: left; max-width: 70px; min-width: 70px;">setosa</td><td align="left" style="text-align: left; max-width: 120px; min-width: 120px;">Sepal.Width</td><td align="right" style="text-align: right; max-width: 40px; min-width: 40px;">3.0</td><td class="pagedtable-padding-col"></td><td class="pagedtable-padding-col"></td></tr><tr class="odd"><td align="left" style="text-align: left; max-width: 70px; min-width: 70px;">setosa</td><td align="left" style="text-align: left; max-width: 120px; min-width: 120px;">Petal.Length</td><td align="right" style="text-align: right; max-width: 40px; min-width: 40px;">1.4</td><td class="pagedtable-padding-col"></td><td class="pagedtable-padding-col"></td></tr><tr class="even"><td align="left" style="text-align: left; max-width: 70px; min-width: 70px;">setosa</td><td align="left" style="text-align: left; max-width: 120px; min-width: 120px;">Petal.Width</td><td align="right" style="text-align: right; max-width: 40px; min-width: 40px;">0.2</td><td class="pagedtable-padding-col"></td><td class="pagedtable-padding-col"></td></tr><tr class="odd"><td align="left" style="text-align: left; max-width: 70px; min-width: 70px;">setosa</td><td align="left" style="text-align: left; max-width: 120px; min-width: 120px;">Sepal.Length</td><td align="right" style="text-align: right; max-width: 40px; min-width: 40px;">4.7</td><td class="pagedtable-padding-col"></td><td class="pagedtable-padding-col"></td></tr><tr class="even"><td align="left" style="text-align: left; max-width: 70px; min-width: 70px;">setosa</td><td align="left" style="text-align: left; max-width: 120px; min-width: 120px;">Sepal.Width</td><td align="right" style="text-align: right; max-width: 40px; min-width: 40px;">3.2</td><td class="pagedtable-padding-col"></td><td class="pagedtable-padding-col"></td></tr></tbody></table><div class="pagedtable-footer"><a class="pagedtable-index-nav">Next</a><div class="pagedtable-indexes"><a class="pagedtable-index pagedtable-index-current" data-page-index="0">1</a><a class="pagedtable-index" data-page-index="1">2</a><a class="pagedtable-index" data-page-index="2">3</a><a class="pagedtable-index" data-page-index="3">4</a><a class="pagedtable-index" data-page-index="4">5</a><a class="pagedtable-index" data-page-index="5">6</a><div class="pagedtable-index-separator-right">...</div><a class="pagedtable-index" data-page-index="59">60</a></div><a class="pagedtable-index-nav pagedtable-index-nav-disabled">Previous</a><div class="pagedtable-info" title="1-10 of 600 rows">1-10 of 600 rows</div></div></div></div>
+</div>
+</div>
+</section>
+<section id="answer-the-following-questions.-tip-you-can-answer-each-question-piping-only-2-3-commands" class="level3">
+<h3 class="anchored" data-anchor-id="answer-the-following-questions.-tip-you-can-answer-each-question-piping-only-2-3-commands">3 - Answer the following questions. (tip: you can answer each question “piping” only 2-3 commands )<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="" href="file:///C:/Users/Batracha/Desktop/Advanced%20Toolkit%20for%20Bioinformatics%20Research/%C4%86wiczenia/6/project6/AT4BR_Exercise_6_Kinga_Zajdel_2024-04-16.html#answer-the-following-questions.-tip-you-can-answer-each-question-piping-only-2-3-commands" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h3>
+<ul>
+<li>A What is the <strong>mean</strong> length and width of the sepal and petal of each species?</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="file:///C:/Users/Batracha/Desktop/Advanced%20Toolkit%20for%20Bioinformatics%20Research/%C4%86wiczenia/6/project6/AT4BR_Exercise_6_Kinga_Zajdel_2024-04-16.html#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="co">#iris_tb_mean&lt;-iris_tb |&gt; </span></span>
+<span id="cb19-2"><a href="file:///C:/Users/Batracha/Desktop/Advanced%20Toolkit%20for%20Bioinformatics%20Research/%C4%86wiczenia/6/project6/AT4BR_Exercise_6_Kinga_Zajdel_2024-04-16.html#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="co">#  dplyr::select("Sepal.Length", "Sepal.Width", "Petal.Length", "Petal.Width", #"Species", )</span></span>
+<span id="cb19-3"><a href="file:///C:/Users/Batracha/Desktop/Advanced%20Toolkit%20for%20Bioinformatics%20Research/%C4%86wiczenia/6/project6/AT4BR_Exercise_6_Kinga_Zajdel_2024-04-16.html#cb19-3" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
+<span id="cb19-4"><a href="file:///C:/Users/Batracha/Desktop/Advanced%20Toolkit%20for%20Bioinformatics%20Research/%C4%86wiczenia/6/project6/AT4BR_Exercise_6_Kinga_Zajdel_2024-04-16.html#cb19-4" aria-hidden="true" tabindex="-1"></a><span class="co"># rmarkdown::paged_table(iris_tb_mean) # shows the table</span></span>
+<span id="cb19-5"><a href="file:///C:/Users/Batracha/Desktop/Advanced%20Toolkit%20for%20Bioinformatics%20Research/%C4%86wiczenia/6/project6/AT4BR_Exercise_6_Kinga_Zajdel_2024-04-16.html#cb19-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-6"><a href="file:///C:/Users/Batracha/Desktop/Advanced%20Toolkit%20for%20Bioinformatics%20Research/%C4%86wiczenia/6/project6/AT4BR_Exercise_6_Kinga_Zajdel_2024-04-16.html#cb19-6" aria-hidden="true" tabindex="-1"></a>iris_tb_long  <span class="sc">|&gt;</span>  <span class="co"># using the long version with its cols!</span></span>
+<span id="cb19-7"><a href="file:///C:/Users/Batracha/Desktop/Advanced%20Toolkit%20for%20Bioinformatics%20Research/%C4%86wiczenia/6/project6/AT4BR_Exercise_6_Kinga_Zajdel_2024-04-16.html#cb19-7" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">group_by</span>(Species, Trait) <span class="sc">|&gt;</span> </span>
+<span id="cb19-8"><a href="file:///C:/Users/Batracha/Desktop/Advanced%20Toolkit%20for%20Bioinformatics%20Research/%C4%86wiczenia/6/project6/AT4BR_Exercise_6_Kinga_Zajdel_2024-04-16.html#cb19-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">mean =</span> <span class="fu">mean</span>(Size)) <span class="co"># assigning name of the column</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>`summarise()` has grouped output by 'Species'. You can override using the
+`.groups` argument.</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 12 × 3
+# Groups:   Species [3]
+   Species    Trait         mean
+   &lt;fct&gt;      &lt;chr&gt;        &lt;dbl&gt;
+ 1 setosa     Petal.Length 1.46 
+ 2 setosa     Petal.Width  0.246
+ 3 setosa     Sepal.Length 5.01 
+ 4 setosa     Sepal.Width  3.43 
+ 5 versicolor Petal.Length 4.26 
+ 6 versicolor Petal.Width  1.33 
+ 7 versicolor Sepal.Length 5.94 
+ 8 versicolor Sepal.Width  2.77 
+ 9 virginica  Petal.Length 5.55 
+10 virginica  Petal.Width  2.03 
+11 virginica  Sepal.Length 6.59 
+12 virginica  Sepal.Width  2.97 </code></pre>
+</div>
+</div>
+<ul>
+<li>B What is the <strong>largest</strong> and <strong>widest</strong>, <strong>petal</strong> and <strong>sepal</strong>, of <strong>virginica</strong> and <strong>versicolor</strong> species?</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="file:///C:/Users/Batracha/Desktop/Advanced%20Toolkit%20for%20Bioinformatics%20Research/%C4%86wiczenia/6/project6/AT4BR_Exercise_6_Kinga_Zajdel_2024-04-16.html#cb22-1" aria-hidden="true" tabindex="-1"></a>iris_tb_long <span class="sc">|&gt;</span>  <span class="co"># using the long version with its col names!</span></span>
+<span id="cb22-2"><a href="file:///C:/Users/Batracha/Desktop/Advanced%20Toolkit%20for%20Bioinformatics%20Research/%C4%86wiczenia/6/project6/AT4BR_Exercise_6_Kinga_Zajdel_2024-04-16.html#cb22-2" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">filter</span>(Species <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"virginica"</span>, <span class="st">"versicolor"</span>)) <span class="sc">|&gt;</span> <span class="co"># no setosa</span></span>
+<span id="cb22-3"><a href="file:///C:/Users/Batracha/Desktop/Advanced%20Toolkit%20for%20Bioinformatics%20Research/%C4%86wiczenia/6/project6/AT4BR_Exercise_6_Kinga_Zajdel_2024-04-16.html#cb22-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(Species, Trait) <span class="sc">|&gt;</span> <span class="co"># as above: grouping by two categories</span></span>
+<span id="cb22-4"><a href="file:///C:/Users/Batracha/Desktop/Advanced%20Toolkit%20for%20Bioinformatics%20Research/%C4%86wiczenia/6/project6/AT4BR_Exercise_6_Kinga_Zajdel_2024-04-16.html#cb22-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">maximum =</span> <span class="fu">max</span>(Size))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>`summarise()` has grouped output by 'Species'. You can override using the
+`.groups` argument.</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 8 × 3
+# Groups:   Species [2]
+  Species    Trait        maximum
+  &lt;fct&gt;      &lt;chr&gt;          &lt;dbl&gt;
+1 versicolor Petal.Length     5.1
+2 versicolor Petal.Width      1.8
+3 versicolor Sepal.Length     7  
+4 versicolor Sepal.Width      3.4
+5 virginica  Petal.Length     6.9
+6 virginica  Petal.Width      2.5
+7 virginica  Sepal.Length     7.9
+8 virginica  Sepal.Width      3.8</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="file:///C:/Users/Batracha/Desktop/Advanced%20Toolkit%20for%20Bioinformatics%20Research/%C4%86wiczenia/6/project6/AT4BR_Exercise_6_Kinga_Zajdel_2024-04-16.html#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="co"># From Console:</span></span>
+<span id="cb25-2"><a href="file:///C:/Users/Batracha/Desktop/Advanced%20Toolkit%20for%20Bioinformatics%20Research/%C4%86wiczenia/6/project6/AT4BR_Exercise_6_Kinga_Zajdel_2024-04-16.html#cb25-2" aria-hidden="true" tabindex="-1"></a><span class="co"># `summarise()` has grouped output by 'Species'. You can override using the `.groups` argument.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ul>
+<li>C For each species, for <strong>sepal</strong> and <strong>petal</strong>, <strong>width</strong> and <strong>length</strong>, how many observations are above the mean?<em> (tip: adding the means as column might help) </em>3C Might seem difficult (it is not that difficult if you know the tricks ;) ). If you don’t manage to make it work, submit your best attempts and we will discuss it in class.</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="file:///C:/Users/Batracha/Desktop/Advanced%20Toolkit%20for%20Bioinformatics%20Research/%C4%86wiczenia/6/project6/AT4BR_Exercise_6_Kinga_Zajdel_2024-04-16.html#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="co"># n() counts observations</span></span>
+<span id="cb26-2"><a href="file:///C:/Users/Batracha/Desktop/Advanced%20Toolkit%20for%20Bioinformatics%20Research/%C4%86wiczenia/6/project6/AT4BR_Exercise_6_Kinga_Zajdel_2024-04-16.html#cb26-2" aria-hidden="true" tabindex="-1"></a><span class="co"># mutate() changes the values of columns and creates new columns.</span></span>
+<span id="cb26-3"><a href="file:///C:/Users/Batracha/Desktop/Advanced%20Toolkit%20for%20Bioinformatics%20Research/%C4%86wiczenia/6/project6/AT4BR_Exercise_6_Kinga_Zajdel_2024-04-16.html#cb26-3" aria-hidden="true" tabindex="-1"></a><span class="co"># filter() chooses rows based on column values</span></span>
+<span id="cb26-4"><a href="file:///C:/Users/Batracha/Desktop/Advanced%20Toolkit%20for%20Bioinformatics%20Research/%C4%86wiczenia/6/project6/AT4BR_Exercise_6_Kinga_Zajdel_2024-04-16.html#cb26-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-5"><a href="file:///C:/Users/Batracha/Desktop/Advanced%20Toolkit%20for%20Bioinformatics%20Research/%C4%86wiczenia/6/project6/AT4BR_Exercise_6_Kinga_Zajdel_2024-04-16.html#cb26-5" aria-hidden="true" tabindex="-1"></a><span class="co">#iris_tb_long</span></span>
+<span id="cb26-6"><a href="file:///C:/Users/Batracha/Desktop/Advanced%20Toolkit%20for%20Bioinformatics%20Research/%C4%86wiczenia/6/project6/AT4BR_Exercise_6_Kinga_Zajdel_2024-04-16.html#cb26-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-7"><a href="file:///C:/Users/Batracha/Desktop/Advanced%20Toolkit%20for%20Bioinformatics%20Research/%C4%86wiczenia/6/project6/AT4BR_Exercise_6_Kinga_Zajdel_2024-04-16.html#cb26-7" aria-hidden="true" tabindex="-1"></a>iris_tb_long <span class="sc">|&gt;</span> <span class="co"># using the long version with its cols!</span></span>
+<span id="cb26-8"><a href="file:///C:/Users/Batracha/Desktop/Advanced%20Toolkit%20for%20Bioinformatics%20Research/%C4%86wiczenia/6/project6/AT4BR_Exercise_6_Kinga_Zajdel_2024-04-16.html#cb26-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(Species, Trait) <span class="sc">|&gt;</span> <span class="co"># as above: grouping by two categories</span></span>
+<span id="cb26-9"><a href="file:///C:/Users/Batracha/Desktop/Advanced%20Toolkit%20for%20Bioinformatics%20Research/%C4%86wiczenia/6/project6/AT4BR_Exercise_6_Kinga_Zajdel_2024-04-16.html#cb26-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">mean =</span> <span class="fu">mean</span>(Size)) <span class="sc">|&gt;</span> <span class="co"># adding a column with mean values</span></span>
+<span id="cb26-10"><a href="file:///C:/Users/Batracha/Desktop/Advanced%20Toolkit%20for%20Bioinformatics%20Research/%C4%86wiczenia/6/project6/AT4BR_Exercise_6_Kinga_Zajdel_2024-04-16.html#cb26-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">number_of_more =</span> <span class="fu">sum</span>(Size <span class="sc">&gt;</span> mean))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>`summarise()` has grouped output by 'Species'. You can override using the
+`.groups` argument.</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 12 × 3
+# Groups:   Species [3]
+   Species    Trait        number_of_more
+   &lt;fct&gt;      &lt;chr&gt;                 &lt;int&gt;
+ 1 setosa     Petal.Length             26
+ 2 setosa     Petal.Width              16
+ 3 setosa     Sepal.Length             22
+ 4 setosa     Sepal.Width              22
+ 5 versicolor Petal.Length             27
+ 6 versicolor Petal.Width              22
+ 7 versicolor Sepal.Length             24
+ 8 versicolor Sepal.Width              29
+ 9 virginica  Petal.Length             25
+10 virginica  Petal.Width              23
+11 virginica  Sepal.Length             22
+12 virginica  Sepal.Width              29</code></pre>
+</div>
+</div>
+</section>
+<section id="a-helpful-webpage" class="level3">
+<h3 class="anchored" data-anchor-id="a-helpful-webpage">A helpful webpage:<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="" href="file:///C:/Users/Batracha/Desktop/Advanced%20Toolkit%20for%20Bioinformatics%20Research/%C4%86wiczenia/6/project6/AT4BR_Exercise_6_Kinga_Zajdel_2024-04-16.html#a-helpful-webpage" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h3>
+<p>https://dplyr.tidyverse.org/articles</p>
+<p><em>No AI used.</em></p>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>
