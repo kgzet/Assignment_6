@@ -10,7 +10,6 @@ editor: visual
 install.packages("tidyverse", repos = "https://cran.r-project.org/")
 library (tidyverse)
 iris_tb <- (iris)
-#iris_tb
 rmarkdown::paged_table(iris_tb) # shows the table in pages
 ```
 
@@ -29,11 +28,6 @@ rmarkdown::paged_table(iris_tb_long) # shows the table
 -   A What is the **mean** length and width of the sepal and petal of each species?
 
 ```{r}
-#iris_tb_mean<-iris_tb |> 
-#  dplyr::select("Sepal.Length", "Sepal.Width", "Petal.Length", "Petal.Width", #"Species", )
-#
-# rmarkdown::paged_table(iris_tb_mean) # shows the table
-
 iris_tb_long  |>  # using the long version with its cols!
   dplyr::group_by(Species, Trait) |> 
   summarise(mean = mean(Size)) # assigning name of the column
@@ -55,15 +49,14 @@ iris_tb_long |>  # using the long version with its col names!
 *3C Might seem difficult (it is not that difficult if you know the tricks ;) ). If you don’t manage to make it work, submit your best attempts and we will discuss it in class.
 
 ```{r}
-# n() counts observations
-# mutate() changes the values of columns and creates new columns.
-# filter() chooses rows based on column values
+# mutate() changes the values of columns and creates new columns
 
 #iris_tb_long
 
 iris_tb_long |> # using the long version with its cols!
   group_by(Species, Trait) |> # as above: grouping by two categories
-  summarise(mean = mean(Size))
+  mutate(mean = mean(Size)) |> # adding a column with mean values
+  summarize(number_of_more = sum(Size > mean))
 ```
 
 ### A helpful webpage:
